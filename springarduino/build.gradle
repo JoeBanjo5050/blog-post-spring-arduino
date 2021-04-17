@@ -15,24 +15,14 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	compile 'org.bidib.com.neuronrobotics:nrjavaserial:3.9.3.1'
+	implementation 'org.bidib.com.neuronrobotics:nrjavaserial:3.9.3.1'
 }
 
 test {
 	useJUnitPlatform()
 }
 
-jar {
-    baseName = 'springarduino'
-    version = '0.0.1-SNAPSHOT'
-}
 
-eclipse {
-    classpath {
-         containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
-         containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
-    }
-}
 
 wrapper{
   gradleVersion = '6.8.3'
